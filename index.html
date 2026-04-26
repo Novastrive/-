@@ -65,19 +65,38 @@
 </head>
 <body>
 
-    <audio autoplay loop>
+    <audio id="bg-music" loop>
         <source src="A Warning.mp3" type="audio/mpeg">
     </audio>
 
-    <img src="logo_4x.png" alt="Logo">
+    <img src="logo_4x.png" alt="Logo" id="logo">
 
     <div class="description">
-        NOVASTRIVE, created by first time developers is a Sci-Fi Indie RPG game about the Milky Way galaxy's inevitable collision with the Andromeda galaxy.
+        NOVASTRIVE, created by first time developers is a Sci-Fi Indie RPG game about the Milky Way galaxy's inevitable collision with the Andromeda galaxy. Press Logo to toggle song
     </div>
 
     <a href="https://store.steampowered.com/app/4420170/Novastrive/" target="_blank">
         <img src="Steam_Button.png" alt="Steam Button" class="steam-button">
     </a>
 
+
+    <script>
+        const logo = document.getElementById('logo');
+        const music = document.getElementById('bg-music');
+
+        let playing = false;
+
+        logo.addEventListener('click', () => {
+            if (playing) {
+                music.pause();
+            } else {
+                music.play();
+            }
+
+            playing = !playing;
+        });
+    </script>
+
 </body>
 </html>
+
