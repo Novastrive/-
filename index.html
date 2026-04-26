@@ -38,6 +38,29 @@
             max-width: 900px;
             padding: 0 20px;
         }
+
+        .steam-button {
+            margin-top: 30px;
+            width: 260px;
+            animation: float 2s ease-in-out infinite;
+            transition: transform 0.2s ease;
+        }
+
+        .steam-button:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -48,6 +71,9 @@
         NOVASTRIVE, created by first time developers is a Sci-Fi Indie RPG game about the Milky Way galaxy's inevitable collision with the Andromeda galaxy.
     </div>
 
+    <a href="https://store.steampowered.com/app/4420170/Novastrive/" target="_blank">
+        <img src="Steam_Button.png" alt="Steam Button" class="steam-button">
+    </a>
+
 </body>
 </html>
-
